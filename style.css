@@ -1,0 +1,477 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', Arial, sans-serif;
+  line-height: 1.7;
+  background: #0d0d0d;
+  color: #e0e0e0;
+}
+
+/* TOPBAR */
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(90deg, #000, #111);
+  padding: 15px 20px;
+  border-bottom: 2px solid #ccc; /* light gray lining */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  margin-bottom: 20px; /* Added spacing below navbar */
+}
+
+/* Burger Menu */
+.dropdown {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.dropbtn {
+  font-size: 26px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  user-select: none;
+  color: #ccc;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 45px;
+  left: 0;
+  background: #111;
+  min-width: 180px;
+  z-index: 2000;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.dropdown-content a {
+  color: #ccc;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-size: 16px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.dropdown-content a:hover {
+  background: #ccc;
+  color: #000;
+}
+
+#menu-toggle:checked ~ .dropdown-content {
+  display: block;
+}
+
+/* Logo + Title */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo {
+  width: 45px;
+  height: auto;
+  border-radius: 50%;
+  border: 2px solid #ccc; /* gray border */
+}
+
+.title {
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #ccc;
+}
+
+/* HERO SECTION */
+.hero {
+  text-align: center;
+  padding: 40px 20px;
+  background: #111;
+  margin: 20px auto 25px auto; /* Added spacing from top and sides */
+  border: 2px solid #ccc; /* lining */
+  border-radius: 12px;
+  max-width: 1100px;
+}
+
+.hero h1 {
+  font-size: 34px;
+  margin: 20px auto 15px auto;
+  color: #e0e0e0;
+  max-width: 900px;
+}
+
+.hero p {
+  font-size: 18px;
+  max-width: 850px;
+  margin: 0 auto 20px auto;
+  color: #bbb;
+}
+
+.hero button {
+  background: #ccc;
+  color: #000;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.hero button:hover {
+  background: #aaa;
+}
+
+/* SECTIONS */
+section {
+  max-width: 1100px;
+  margin: 25px auto; /* Spacing between sections */
+  padding: 30px 20px;
+  background: #111;
+  border: 1px solid #ccc; /* light gray border */
+  border-radius: 10px;
+}
+
+section h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #ccc; /* lining */
+  display: inline-block;
+  padding-bottom: 6px;
+  color: #ccc;
+}
+
+/* BLOG IMAGES */
+.blog-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 25px auto 10px auto;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.caption {
+  text-align: center;
+  font-size: 15px;
+  color: #888;
+  margin-bottom: 25px;
+  font-style: italic;
+}
+
+/* TIPS */
+details {
+  margin-bottom: 12px;
+  background: #1a1a1a;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: 0.3s ease;
+  color: #ccc;
+}
+
+details:hover {
+  background: #ccc;
+  color: #000;
+}
+
+summary {
+  font-weight: bold;
+  cursor: pointer;
+  color: #ccc;
+}
+
+/* TESTIMONIALS */
+.testimonial-card {
+  background: #1a1a1a;
+  border-left: 4px solid #ccc;
+  padding: 20px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+}
+
+/* Comment Box */
+.comment-box {
+  margin-top: 20px;
+  padding: 20px;
+  background: #1a1a1a;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.comment-box h3 {
+  margin-top: 0;
+  font-size: 18px;
+  color: #ccc;
+  margin-bottom: 10px;
+}
+
+.comment-box textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 15px;
+  resize: none;
+  margin-bottom: 10px;
+  background: #111;
+  color: #fff;
+}
+
+.comment-box button {
+  background: #ccc;
+  color: #000;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.comment-box button:hover {
+  background: #aaa;
+}
+
+/* NEWS CARDS */
+.news-card {
+  background: #1a1a1a;
+  border-left: 4px solid #ccc;
+  padding: 25px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+}
+
+.news-card h3 {
+  margin-top: 0;
+  color: #ccc;
+  font-size: 22px;
+}
+
+.news-card .meta {
+  font-size: 14px;
+  color: #aaa;
+  margin-bottom: 10px;
+}
+
+/* FOOTER */
+.footer-panel {
+  background: #000;
+  color: #ccc;
+  padding: 40px 20px;
+  text-align: center;
+  border-top: 2px solid #ccc;
+}
+
+.footer-panel h2 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #ccc;
+  display: inline-block;
+  padding-bottom: 6px;
+}
+
+.footer-panel p {
+  max-width: 700px;
+  margin: 0 auto 15px auto;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #bbb;
+}
+
+.footer-copy {
+  font-size: 14px;
+  color: #666;
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* SLIDESHOW */
+.slideshow-container {
+  position: relative;
+  max-width: 100%;
+  margin: 0 auto 20px auto;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #000;
+  border: 1px solid #ccc;
+}
+
+.slides-wrapper {
+  display: flex;
+  transition: transform 0.8s ease-in-out;
+  width: 100%;
+}
+
+.slides {
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slides img {
+  width: 100%;
+  height: auto;
+  max-height: 500px;
+  object-fit: contain;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+/* Controls under slideshow */
+.controls-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 12px;
+}
+
+/* Arrows */
+.prev,
+.next {
+  cursor: pointer;
+  padding: 8px 14px;
+  background: #ccc;
+  color: #000;
+  font-size: 20px;
+  border-radius: 6px;
+  user-select: none;
+  transition: 0.3s;
+}
+
+.prev:hover,
+.next:hover {
+  background: #aaa;
+}
+
+/* Dots */
+.dots-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.dot {
+  cursor: pointer;
+  height: 12px;
+  width: 12px;
+  background-color: #555;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.dot.active,
+.dot:hover {
+  background-color: #ccc;
+  transform: scale(1.2);
+}
+
+/* Top-right About link */
+.top-right {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.about-link {
+  color: #ccc;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 8px 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.about-link:hover {
+  background: #ccc;
+  color: #000;
+}
+
+/* About page hero */
+#about.hero {
+  background: #111;
+  border: 2px solid #ccc;
+  border-radius: 12px;
+}
+
+#about.hero h1 {
+  font-size: 36px;
+  color: #ccc;
+}
+
+#about.hero p {
+  font-size: 18px;
+  color: #bbb;
+  margin-top: 12px;
+  max-width: 850px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Mission section on About */
+#team {
+  background: #1a1a1a;
+  border-left: 4px solid #ccc;
+  padding: 25px;
+  border-radius: 8px;
+}
+
+#team p {
+  color: #ccc;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+/* Developer Section */
+#developer {
+  margin-top: 50px;
+  text-align: center;
+  padding: 30px 20px;
+  background: #111;
+  border-top: 2px solid #ccc;
+  border-radius: 10px;
+}
+
+#developer h2 {
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+.developer-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.developer-card img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  object-fit: cover;
+}
+
+.developer-card p {
+  max-width: 600px;
+  color: #ccc;
+  font-size: 16px;
+  line-height: 1.5;
+}
